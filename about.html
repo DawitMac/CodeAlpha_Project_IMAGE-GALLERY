@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./images/logo.png" alt="CodeAlpha" />
+        <ul class="navlist">
+         <li>
+            <a href="index.html" class="my-link">Home</a>
+         </li>
+       <li>
+        <a href="about.html" class="my-link">About</a>
+       </li>
+       <li>
+        <a href="contact.html" class="my-link">Contact</a>
+     </li>
+        </ul>
+        <button class="menu-icon">
+           <img src="./images/menu1.png" alt="menu" />
+        </button>
+        <ul class="dropdown-menu">
+         <li>
+            <a href="index.html">Home</a>
+         </li>
+       <li>
+        <a href="about.html">About</a>
+       </li>
+       <li>
+        <a href="contact.html">Contact</a>
+     </li>
+      </ul>
+      </nav>
+      <section class="section">
+        <div class="description">
+            <div class="about" id="about">
+                <h1>Just a few words about us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequat ante ac congue. Quisque porttitor porttitor tempus. Donec maximus ipsum non ornare vestibulum. Sed libero nibh, feugiat at enim id, bibendum sollicitudin arcu. Aliquam elit nibh, finibus eget mauris non, pretium vehicula ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+            <img src="images/about.jpg" alt="description" />
+        </div>
+      </section>
+      <script src="script.js" type="module"></script>
+     <script>
+        const menuIcon = document.querySelector(".menu-icon")
+  const dropdownMenu = document.querySelector(".dropdown-menu")
+  menuIcon.addEventListener("click", function(e){
+    e.preventDefault();
+     dropdownMenu.classList.toggle("active");
+  })
+  dropdownMenu.addEventListener("click" , function(e){
+    dropdownMenu.classList.toggle("active");
+  } )
+     </script>
+</body>
+</html>

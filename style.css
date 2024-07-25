@@ -1,0 +1,343 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    max-width: 100dvw;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 24px;
+    background-color: white;
+    z-index: 10;
+}
+.navbar img{
+    width : 120px;
+    height: 100px;
+}
+.navlist {
+   list-style-type:  none;
+   display: none;
+   z-index: 5;
+}
+.navlist li{
+  font-size: larger;
+  font-weight: normal;
+  cursor: pointer;
+}
+.navlist li a {
+  text-decoration: none;
+  color: inherit;
+}
+.navlist li:hover{
+  scale: 1.1;
+  transition: all 0.4s ease-in-out;
+  color: rgb(5, 5, 8);
+  }
+  .section{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    z-index: -1;
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap : 20px;
+    width: 100dvw;
+    margin: 0px auto;
+  }
+  .options button{
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .options button:hover {
+    transition: all 0.4s ease-in-out;
+    background-color: white;
+  }
+  .container {
+    max-width: 100vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+    opacity: 1;
+    
+    
+}
+  .container img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  .container img:hover {
+    transform: scale(1.05);
+  }
+  .popup-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    overflow: auto;
+  }
+  .popup-container::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .popup-container::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .popup-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .popup-container {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  
+  .popup-image {
+    display: block;
+    margin: 10% auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+  }
+  .menu-icon{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.1);
+    transition: all 0.4 ease-out;
+  }
+
+  .menu-icon img{
+    height: 35px;
+    width: 35px;
+  }
+
+   
+
+  .dropdown-menu {
+    position: absolute ;
+    margin-top: 450px;
+    opacity: 0;
+    transform: translateY(-500px);
+    z-index: 0;
+  }
+  .dropdown-menu.active {
+    list-style-type: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 450px;
+    z-index: 1;
+    width: 100vw;
+    padding: 80px 80px;
+    background-color: antiquewhite;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+.dropdown-menu li{
+  font-size: xx-large;
+  font-weight: normal;
+  cursor: pointer;
+}
+.dropdown-menu li:hover{
+  scale: 1.05;
+  transition: all 0.4s ease-in-out;
+  }
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .dropdown-menu li:hover{
+    scale: 1.1;
+    transition: all 0.4s ease-in-out;
+    color: rgb(5, 5, 8);
+    }
+  .contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  position: absolute;
+  margin-top: 150px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form {
+  max-width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+ 
+}
+.form label {
+  display: block;
+  margin: 10px 10px;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form textarea {
+  height: 100px;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: grey;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.form button:hover {
+  background-color: #047293;
+}
+.about{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px -50px 10px 10px;
+  background-color: white;
+  padding: 20px;
+  
+  
+}
+.about h1{
+  font-size:larger;
+}
+.about p{
+  font-size: medium;
+  font-weight: normal;
+  color: #73818e;
+  line-height: 24px;
+}
+.description{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap : 30px;
+  margin: 40px 40px;
+  background-color:white;
+  
+}
+.description img{
+  width: 60%;
+  height: 100%;
+ 
+}
+  @media screen and ( min-width : 640px) {
+    .navlist {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 80px;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .dropdown-menu {
+      display: none;
+    }
+  }
+  @media screen and (min-width : 968px) {
+    .description{
+        display: flex;
+        align-items: start;
+        flex-direction: row;
+        justify-content: center;
+        gap : 50px;
+        margin: 40px 40px;
+        background-color:white;
+    }
+    .description img{
+        width: 50%;
+    }
+    .about h1{
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 45px;
+  }
+    .about p{
+      font-size: x-large;
+      font-weight: normal;
+      color: #73818e;
+      line-height: 45px;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 45px;
+  }
+  .about{
+    margin: 40px -150px 40px 40px;
+    gap: 50px;
+    padding: 50px;
+  
+  }
+  }
